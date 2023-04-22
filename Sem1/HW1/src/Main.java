@@ -12,6 +12,7 @@ public class Main {
         System.out.println();
         mod.arrayOper(arr1, arr2, "Add");
 
+        System.out.println();
         int[][] a1 = {{}, {1}, {2, 3, 32}, {4, 5, 6}, {7, 8, 9, 10}, {11, 12}};
         for (int i = 0; i < a1.length; i++) {
             System.out.println(Arrays.toString(a1[i]));
