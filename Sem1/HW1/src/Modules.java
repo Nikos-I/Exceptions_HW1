@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Modules {
     void arrayOper(int[] array1, int[] array2, String op) {
@@ -40,5 +41,20 @@ public class Modules {
             illegalVal = "";
         }
         if (err) System.out.println("\n" + (char) 27 + "[31m Есть ошибки" + (char) 27 + "[37m");
+    }
+
+    String prompt(String message) {
+        Scanner in = new Scanner(System.in);
+        System.out.print(message);
+        return in.nextLine();
+    }
+    int promptInt(String inputPrompt) {
+        int intValue = 0;
+        try {
+            intValue = Integer.parseInt(prompt(inputPrompt));
+        } catch (NumberFormatException nfe) {
+            System.out.println("Неверный формат ввода числа: " + nfe.getMessage());
+        }
+        return intValue;
     }
 }
