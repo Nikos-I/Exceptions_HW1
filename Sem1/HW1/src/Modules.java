@@ -29,13 +29,16 @@ public class Modules {
 
     void checkTriangularArray(int[][] inpArray) {
         String illegalVal = "";
+        boolean err = false;
         for (int i = 0; i < inpArray.length; i++) {
             System.out.println((char) 27 + "[37m");
             if (inpArray[i].length != i) {
                 illegalVal = (char) 27 + "[31m" + "Неверное кол-во столбцов:";
+                err = true;
             }
             System.out.printf("Для строки %d столбцов %d %s", i, inpArray[i].length, illegalVal);
             illegalVal = "";
         }
+        if (err) System.out.println("\n" + (char) 27 + "[31m Есть ошибки" + (char) 27 + "[37m");
     }
 }
